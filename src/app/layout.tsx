@@ -87,11 +87,11 @@ export default function RootLayout({
 
 
             <Sheet>
-              <SheetTrigger>🛒</SheetTrigger>
+              <SheetTrigger><img src="img/cart.jpg" alt="Cart Icon" className="h-6 w-7" /></SheetTrigger>
               <SheetContent>
                 <SheetHeader>
-                  <SheetTitle>Menu</SheetTitle>
-                  <SheetDescription>Navigation</SheetDescription>
+                  <SheetTitle>My Cart</SheetTitle>
+                  <SheetDescription>Items</SheetDescription>
                 </SheetHeader>
               </SheetContent>
             </Sheet>
