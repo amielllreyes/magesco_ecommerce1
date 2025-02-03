@@ -48,37 +48,43 @@ export default function RootLayout({
           <h1 className="m-0 text-lg">Magesco Garden and Pool Services</h1>
 
           <div className="ml-auto flex items-center gap-3">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                  <NavigationMenuContent className="p-12 text-xs">
-                    <NavigationMenuLink href="#">Products</NavigationMenuLink>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
+          <NavigationMenu>
+  <NavigationMenuList className="flex gap-3">
+    {/* Products */}
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+      <NavigationMenuContent className="w-[300px] h-[150px] p-12 text-xs">
+        <NavigationMenuLink href="#">Get started by buying high quality and top-notch pool products</NavigationMenuLink>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
 
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-                  <NavigationMenuContent className="p-12 text-xs">
-                    <NavigationMenuLink href="#">Services</NavigationMenuLink>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
+    {/* Services */}
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+      <NavigationMenuContent className="w-[300px] h-[150px] p-12 text-xs">
+        <NavigationMenuLink href="#">Services</NavigationMenuLink>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
 
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>About us</NavigationMenuTrigger>
-                  <NavigationMenuContent className="p-12 text-xs">
-                    <NavigationMenuLink href="#">About us</NavigationMenuLink>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
+    {/* About Us */}
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>About us</NavigationMenuTrigger>
+      <NavigationMenuContent className="w-[300px] h-[150px] p-12 text-xs">
+        <NavigationMenuLink href="#">About us</NavigationMenuLink>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
 
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Contact us</NavigationMenuTrigger>
-                  <NavigationMenuContent className="p-12 text-xs">
-                    <NavigationMenuLink href="#">Contact us</NavigationMenuLink>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+    {/* Contact Us */}
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>Contact us</NavigationMenuTrigger>
+      <NavigationMenuContent className="w-[300px] h-[150px] p-12 text-xs">
+        <NavigationMenuLink href="#">Contact us</NavigationMenuLink>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu>
+
+
 
             <Sheet>
               <SheetTrigger>🛒</SheetTrigger>
