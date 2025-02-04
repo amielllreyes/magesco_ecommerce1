@@ -70,3 +70,8 @@ body {
     @apply bg-background text-foreground;
   }
 }
+/* globals.css */
+* {
+  font-family: var(--font-poppins), sans-serif;
+}
+

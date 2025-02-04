@@ -1,15 +1,24 @@
 "use client";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="flex flex-col">
-      <section className="bg-blue-500 p-12 md:p-6 sm:p-4 min-h-[90vh] flex justify-center items-center font-bold">
-        <h1 className="text-4xl sm:text-2xl text-red-600">Home page</h1>
-      </section>
+    
+      <section
+        className="flex justify-center items-center min-h-[90vh] p-12 md:p-6 sm:p-4 font-bold bg-blue-500"
+        style={{
+          backgroundImage: "url('img/MagescoGardenandPoolServices.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      ></section>
 
-      <section className="bg-white p-12 md:p-6 sm:p-4 min-h-[90vh] flex justify-center items-center">
-        <h1 className="text-4xl sm:text-2xl">Images</h1>
+     
+      <section className="flex justify-center items-center min-h-[90vh] p-12 md:p-6 sm:p-4 bg-lightblue bg-[url('/wave.svg')] bg-no-repeat bg-bottom bg-cover">
+      Welcome to Magesco Garden and Pool Services
+      </section>
+      <section className="flex justify-center items-center min-h-[90vh] p-12 md:p-6 sm:p-4 bg-lightblue bg-[url('/upsidedownwave.svg')] bg-no-repeat bg-bottom bg-cover">
+        Feautured Works
       </section>
     </main>
   );
