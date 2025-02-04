@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 import {
   NavigationMenu,
@@ -39,55 +40,57 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
         <header className="border-b border-lightblue p-4 flex items-center gap-3">
-          <img src="img/magescologo.png" alt="Magesco Logo" className="h-12" />
-          <h1 className="m-0 text-lg font-medium">Magesco Garden and Pool Services</h1>
+          
+            <Link href = "/"><img src="img/magescologo.png" alt="Magesco Logo" className="h-12" /></Link>
+          
+          <h1 className="text-xl font-bold">Magesco Garden and Pool Services</h1>
 
           <div className="ml-auto flex items-center gap-3">
           <NavigationMenu>
-  <NavigationMenuList className="flex gap-3">
-    {/* Products */}
-    <NavigationMenuItem>
-      <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-      <NavigationMenuContent className="w-[300px] h-[150px] p-12 text-xs">
-        <NavigationMenuLink href="#">Get started by buying high quality and top-notch pool products</NavigationMenuLink>
-      </NavigationMenuContent>
-    </NavigationMenuItem>
+        <NavigationMenuList className="flex gap-3">
+        
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+            <NavigationMenuContent className="w-[300px] h-[200px] p-12 text-lg font-medium justify-center">
+        <NavigationMenuLink href="/products">Get started by buying high quality and top-notch pool products</NavigationMenuLink>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-    {/* Services */}
-    <NavigationMenuItem>
-      <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-      <NavigationMenuContent className="w-[300px] h-[150px] p-12 text-xs">
-        <NavigationMenuLink href="#">Services</NavigationMenuLink>
-      </NavigationMenuContent>
-    </NavigationMenuItem>
+       
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+            <NavigationMenuContent className="w-[300px] h-[150px] p-12 text-xs">
+        <NavigationMenuLink href="/services">Services</NavigationMenuLink>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-    {/* About Us */}
-    <NavigationMenuItem>
-      <NavigationMenuTrigger>About us</NavigationMenuTrigger>
-      <NavigationMenuContent className="w-[300px] h-[150px] p-12 text-xs">
+         
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>About us</NavigationMenuTrigger>
+            <NavigationMenuContent className="w-[300px] h-[150px] p-12 text-xs">
         <NavigationMenuLink href="#">About us</NavigationMenuLink>
-      </NavigationMenuContent>
-    </NavigationMenuItem>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-    {/* Contact Us */}
-    <NavigationMenuItem>
-      <NavigationMenuTrigger>Contact us</NavigationMenuTrigger>
-      <NavigationMenuContent className="w-[300px] h-[150px] p-12 text-xs">
+         
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Contact us</NavigationMenuTrigger>
+            <NavigationMenuContent className="w-[300px] h-[150px] p-12 text-xs">
         <NavigationMenuLink href="#">Contact us</NavigationMenuLink>
-      </NavigationMenuContent>
-    </NavigationMenuItem>
-  </NavigationMenuList>
-</NavigationMenu>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
 
 
 
             <Sheet>
               <SheetTrigger><img src="/cart.svg" alt="Cart Icon" className="h-6 w-7"/></SheetTrigger>
               <SheetContent>
-                <SheetHeader>
-                  <SheetTitle>My Cart</SheetTitle>
-                  <SheetDescription>Items</SheetDescription>
-                </SheetHeader>
+          <SheetHeader>
+            <SheetTitle>My Cart</SheetTitle>
+            <SheetDescription>Items</SheetDescription>
+          </SheetHeader>
               </SheetContent>
             </Sheet>
           </div>
@@ -95,9 +98,41 @@ export default function RootLayout({
 
         {children}
 
-        <footer className="border-t border-black p-4 text-center mt-2 h-40 bg-gray-900 text-white">
-          Footer
-        </footer>
+        <footer className="bg-gray-900 text-white p-12">
+  <div className="container mx-auto flex flex-col md:flex-row justify-between">
+  
+    <div className="flex items-start space-x-4 mb-8 md:mb-0">
+      <div className="flex items-center justify-center w-12 h-12">
+        <img src="img/magescologo.png" alt="Logo"/>
+      </div>
+      <div>
+        <h2 className="text-lg font-bold">Magesco Garden and Pool Services</h2>
+        <p className="mt-1 text-gray-400 text-sm max-w-md">
+          Transform your backyard into a resort-worthy retreat with our expert pool and landscaping solutions. Our skilled team brings together the soothing splendor of crystal-clear pools with the natural beauty of thoughtfully designed landscapes.
+        </p>
+      </div>
+    </div>
+
+
+    <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-16">
+      <div>
+        <h3 className="text-blue-400 font-bold">About</h3>
+        <ul className="mt-2 space-y-1">
+          <li><a href="#" className="hover:text-blue-300">Shipping</a></li>
+          <li><a href="#" className="hover:text-blue-300">Help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 className="text-blue-400 font-bold">Info</h3>
+        <ul className="mt-2 space-y-1">
+          <li><a href="#" className="hover:text-blue-300">Contact us</a></li>
+          <li><a href="#" className="hover:text-blue-300">Terms & Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
       </body>
     </html>
   );
