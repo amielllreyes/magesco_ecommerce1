@@ -43,7 +43,7 @@ export default function RootLayout({
           
             <Link href = "/"><img src="img/magescologo.png" alt="Magesco Logo" className="h-12" /></Link>
           
-          <h1 className="text-xl font-bold">Magesco Garden and Pool Services</h1>
+          <h1 className="text-xl font-medium">Magesco Garden and Pool Services</h1>
 
           <div className="ml-auto flex items-center gap-3">
           <NavigationMenu>
