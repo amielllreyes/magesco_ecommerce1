@@ -37,13 +37,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body className={`${poppins.variable} antialiased`}>
         <header className="border-b border-lightblue p-4 flex items-center gap-3">
           
             <Link href = "/"><img src="img/magescologo.png" alt="Magesco Logo" className="h-12" /></Link>
           
-          <h1 className="text-xl font-medium">Magesco Garden and Pool Services</h1>
+          <Link href= "/"><h1 className="text-xl font-medium">Magesco Garden and Pool Services</h1></Link>
 
           <div className="ml-auto flex items-center gap-3">
           <NavigationMenu>
